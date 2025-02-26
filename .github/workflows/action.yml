@@ -1,7 +1,12 @@
 name: 'Profile Readme Development Stats'
 author: Anmol Pratap Singh
 description: 'Are you an early 🐤 or a night 🦉? When are you most productive during the day? Let''s check out in your readme!'
-
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # Allows manual triggering
+  
 inputs:
   GH_TOKEN:
     description: 'GitHub access token with Repo scope'
